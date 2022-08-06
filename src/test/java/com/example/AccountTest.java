@@ -6,22 +6,12 @@ import org.junit.Test;
 
 public class AccountTest {
 
-    @Before
-    public void beforeTests() {
-
-    }
-
     @Test
     public void nameShorterThenThreeSymbolsReturnsFalse() {
         String name = "Аа";
         Boolean ExceptedValue = false;
         Account account = new Account(name);
         Assert.assertEquals("Имя из 2 символов возвращает не false", ExceptedValue , account.checkNameToEmboss());
-    }
-
-    @Test
-    public void nameShorterThenThreeSymbolsPrintCorrectMessage() {
-
     }
 
     @Test
@@ -33,21 +23,11 @@ public class AccountTest {
     }
 
     @Test
-    public void nameLargerThenNineteenSymbolsPrintCorrectMessage() {
-
-    }
-
-    @Test
     public void nameStartsWithSpaceReturnsFalse() {
         String name = " Аа";
         Boolean ExceptedValue = false;
         Account account = new Account(name);
         Assert.assertEquals("Имя начинающееся пробелом возвращает не false", ExceptedValue , account.checkNameToEmboss());
-    }
-
-    @Test
-    public void nameStartsWithSpacePrintCorrectMessage() {
-
     }
 
     @Test
@@ -59,21 +39,11 @@ public class AccountTest {
     }
 
     @Test
-    public void nameEndsWithSpacePrintCorrectMessage() {
-
-    }
-
-    @Test
     public void nameWithoutSpaceReturnsFalse() {
         String name = "ЕвгенийИванов";
         Boolean ExceptedValue = false;
         Account account = new Account(name);
         Assert.assertEquals("Имя начинающееся с пробела возвращает не false", ExceptedValue , account.checkNameToEmboss());
-    }
-
-    @Test
-    public void nameWithoutSpacePrintCorrectMessage() {
-
     }
 
     @Test
@@ -84,8 +54,4 @@ public class AccountTest {
         Assert.assertEquals("Удовлетворяющее условиям имя возвращает не true", ExceptedValue , account.checkNameToEmboss());
     }
 
-    @Test
-    public void correctNamePrintCorrectMessage() {
-
-    }
 }
