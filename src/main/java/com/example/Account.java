@@ -9,10 +9,7 @@ public class Account {
     }
 
     public boolean checkNameToEmboss() {
-        /*
-             Этот метод должен проверять, что сохранённая через конструктор строка соответствует требованиям.
-             Если строка удовлетворяет условиям, метод возвращает true, иначе — false.
-         */
+
         if (name.length() < 3) {
             System.out.println("Имя слишком короткое");
             return false;
